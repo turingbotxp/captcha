@@ -2,6 +2,16 @@ body, h1, p {
     margin: 0;
 }
 
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    color: #159957;
+}
+
 .wrapper {
     width: 700px;
     margin: 0 auto;
@@ -22,6 +32,11 @@ body, h1, p {
     padding: 16px 0;
 }
 
+.header a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
 .header button {
     background: transparent;
     color: #ffffff;
@@ -35,23 +50,20 @@ body, h1, p {
     margin-left: 6px;
 }
 
-
-
 .main h2 {
     color: #159957;
 }
 
-.main ul{
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-}
 
-.main li + li {
-    margin-top: 32px;
+.main .wrapper > ul {
+    margin-top: 64px;
 }
 
 .main .holder {
     height: 100px;
     background-color: #f7f7f7;
+}
+
+.main .wrapper > ul > li + li {
+    margin-top: 96px;
 }

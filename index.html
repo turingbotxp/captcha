@@ -3,59 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <title>通过图灵测试的方案（验证码识别）</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cover.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
+            integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="header">
     <div class="wrapper center">
         <h1>通过图灵测试的方案（验证码识别）</h1>
-        <p>Powered By @图灵BOT小皮</p>
+        <p>powered by <a href="https://github.com/turingbotxp/captcha" target="_blank">@图灵BOT小皮</a></p>
         <div>
-            <button>联系QQ</button>
-            <button>联系微信</button>
+            <a href="#contact">
+                <button type="button" class="btn btn-outline-light">联系我们</button>
+            </a>
+
+<!--            <button type="button" class="btn btn-primary">-->
+<!--                <a href="">Primary</a>-->
+<!--            </button>-->
+<!--            <button>联系QQ</button>-->
+<!--            <button>联系微信</button>-->
         </div>
     </div>
 </div>
 
 <div class="main">
     <div class="wrapper">
-        <h2>什么是验证码？</h2>
-        <p>验证码 CAPTCHA（全自动区分计算机和人类的图灵测试）是一种区别用户是计算机还是人的公共全自动程序。
-            问题可以由计算机生成并评判，但是必须只有人类才能解答。
-            由于计算机无法解答CAPTCHA的问题，所以回答出问题的用户就可以被认为是人类。</p>
-
-        <h2>验证码的类型</h2>
         <ul>
             <li>
-                <b>字符型验证码</b>
-                <div class="holder"></div>
-                <p>识别字符串文本。可以通过图像识别模型来进行鉴别，影响其效果的因素有：混淆色、噪点、字符黏连、形变、动画等。</p>
+                <h2>什么是验证码？</h2>
+                <p>验证码 CAPTCHA（全自动区分计算机和人类的图灵测试）是一种区别用户是计算机还是人的公共全自动程序。
+                    问题可以由计算机生成并评判，但是必须只有人类才能解答。
+                    由于计算机无法解答CAPTCHA的问题，所以回答出问题的用户就可以被认为是人类。</p>
             </li>
-            <li>
-                <b>短信验证码</b>
-                <div class="holder"></div>
-                <p>由服务方发起短信（成本费用较高，需防刷），由客户录入短信中的验证码部分。</p>
-            </li>
-            <li>
-                <b>语音验证码</b>
-                <div class="holder"></div>
-                <p>属于无障碍设施中的一种。可以通过语音识别模型来进行鉴别，影响其效果的因素有：音频质量、方言情况等</p>
-            </li>
-            <li>
-                <b>问答形式验证码</b>
-                <div class="holder"></div>
-                <p>例如：给出9张图片，请点击下图中所有的小汽车。</p>
-            </li>
-            <li>
-                <b>行为验证码</b>
-                <div class="holder"></div>
-                <p>拖动，旋转、依次点击字符等。可以通过图像识别后，模拟手势操作实现</p>
-            </li>
+        </ul>
 
-            <h2>如何通过图灵测试？</h2>
-            <p>我们提供了完善的解决方案，如需要帮助请联系我们</p>
-            <div class="holder"></div>
+        <ul>
+            <li>
+                <h2>常见的类型？</h2>
+                <h4>图像验证码</h4>
+                <p>识别图像中的文本字符，或是图像描述了一道题目，需作出对应的回答。影响因素：混淆色、噪点、字符黏连、形变、动画等。</p>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           data-toggle="pill"
+                           href="#pics1">
+                            示例
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           data-toggle="pill"
+                           href="#seq1">
+                            解决方案
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="pics1">
+                        <img src="pics/1.png" alt="pics1">
+                    </div>
+                    <div class="tab-pane fade" id="seq1">
+                        <img src="./seq/1.png" alt="seq1" width="700">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h4>短信验证码</h4>
+                <p>通常由服务方发起短信（成本费用较高，业务本身需保护）。</p>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           data-toggle="pill"
+                           href="#pics2">
+                            示例
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           data-toggle="pill"
+                           href="#seq2">
+                            解决方案
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="pics2">
+                        <img src="./pics/2.png" alt="pics2">
+                    </div>
+                    <div class="tab-pane fade" id="seq2">
+                        <img src="./seq/2.png" alt="seq2" width="700">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h4>语音验证码</h4>
+                <p>属于无障碍设施中的一种。可以通过语音识别模型来进行鉴别，影响因素：音频质量、方言情况等</p>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           data-toggle="pill"
+                           href="#pics3">
+                            示例
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           data-toggle="pill"
+                           href="#seq3">
+                            解决方案
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="pics3">
+                        <img src="./pics/3.png" alt="pics3">
+                    </div>
+                    <div class="tab-pane fade" id="seq3">
+                        <img src="./seq/3.png" alt="seq3" width="700">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h4>行为验证码</h4>
+                <p>拖动，旋转、依次点击字符等。可以通过图像识别后，模拟手势操作实现</p>
+                <p>例如：给出9张图片，请点击下图中所有的小汽车。</p>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           data-toggle="pill"
+                           href="#pics4">
+                            示例
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled"
+                           data-toggle="pill"
+                           href="#seq4">
+                            解决方案
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="pics4">
+                        <img src="./pics/4.1.png" alt="pics41">
+                        <p>或</p>
+                        <img src="./pics/4.2.png" alt="pics42">
+                    </div>
+                    <div class="tab-pane fade" id="seq4">
+                        seq4
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+        <ul id="contact">
+            <li>
+                <h2>如何快速通过图灵测试？</h2>
+                <p>我们提供了完善的解决方案，请通过以下方式联系我们</p>
+                <img src="./qrcode/qq.jpg" alt="qrcodeqq" width="200">
+                <img src="./qrcode/wx.jpg" alt="qrcodewx" width="200">
+            </li>
         </ul>
     </div>
 </div>
