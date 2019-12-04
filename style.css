@@ -67,3 +67,7 @@ a {
 .main .wrapper > ul > li + li {
     margin-top: 96px;
 }
+
+.seq{
+    background-color: #f0f0f0;
+}
